@@ -94,11 +94,10 @@ template < class T >
 T* HeapSkew<T>::heapRemove()
 {
    //DO THIS (calls merge, should be short)
+   T* result = bt->getRootItem();
 	BinaryTree<T>* left = bt->detatchLeftSubtree();
 	BinaryTree<T>* right = bt->detatchRightSubtree();
-
-
-
+	bt = merge(left,right);
 
    sze--;
    return result;
