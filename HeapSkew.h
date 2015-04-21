@@ -83,10 +83,9 @@ template < class T >
 void HeapSkew<T>::heapInsert(T* item)
 {
    //DO THIS (calls merge, should be short)
-
-
-
-
+	BinaryTree<T>* left = bt;
+	BinaryTree<T>* right = new BinaryTree<T>(item);
+	bt = merge(left,right);
 
    sze++;
 }
@@ -95,7 +94,8 @@ template < class T >
 T* HeapSkew<T>::heapRemove()
 {
    //DO THIS (calls merge, should be short)
-
+	BinaryTree<T>* left = bt->detatchLeftSubtree();
+	BinaryTree<T>* right = bt->detatchRightSubtree();
 
 
 
