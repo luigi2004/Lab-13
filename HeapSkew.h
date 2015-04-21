@@ -56,12 +56,12 @@ BinaryTree<T>* HeapSkew<T>::merge(BinaryTree<T>* left, BinaryTree<T>* right)
 
 	if(left->isEmpty()) 
 	{
-		delete left;
+		//delete left;
 		return right;
 	}
 	if(right->isEmpty())
 	{
-		delete right;
+		//delete right;
 		return left;
 	}
 	
