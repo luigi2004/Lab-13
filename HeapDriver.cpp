@@ -45,7 +45,7 @@ while(true)
    while(!(sh->heapIsEmpty()))
    {
       CD* cd = sh->heapRemove();
-      //cd->displayCD();
+      cd->displayCD();
    }
 
    delete sh;
